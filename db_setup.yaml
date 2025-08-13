@@ -1,0 +1,11 @@
+DB_NAME: data.db
+TABLE_NAME: ingested_data
+PRIMARY_KEY: id
+PRIMARY_KEY_TYPE: INTEGER PRIMARY KEY AUTOINCREMENT
+EXTRA_FIELDS:
+  - name: sensor_id
+    type: TEXT
+  - name: value
+    type: REAL
+  - name: timestamp
+    type: TEXT

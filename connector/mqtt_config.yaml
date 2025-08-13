@@ -1,0 +1,8 @@
+# Example config for MQTT connector
+mqtt:
+  broker: "broker.emqx.io"
+  port: 1883
+  topic: "datacollector1208"
+  username: ""
+  password: ""
+  ingest_agent_url: "tcp://ingest_agent:5555"

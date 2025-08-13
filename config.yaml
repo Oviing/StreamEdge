@@ -1,0 +1,5 @@
+# config.yaml
+DB_NAME: data.db
+TABLE_NAME: ingested_data
+ZMQ_PORT: 5555
+LOG_LEVEL: INFO

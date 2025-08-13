@@ -1,0 +1,8 @@
+# Example MQTT payload for ingestion
+{
+  "device_id": "sensor_001",
+  "timestamp": "2025-08-13T12:34:56Z",
+  "temperature": 23.5,
+  "humidity": 45.2,
+  "status": "active"
+}

@@ -1,0 +1,5 @@
+
+pyzmq
+pyyaml
+streamlit
+paho-mqtt

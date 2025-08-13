@@ -1,0 +1,8 @@
+# payload_config.yaml
+fields:
+  - name: sensor_id
+    type: TEXT
+  - name: value
+    type: REAL
+  - name: timestamp
+    type: TEXT
