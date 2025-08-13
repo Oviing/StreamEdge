@@ -3,7 +3,7 @@ services:
   ingest_agent:
     build:
       context: .
-      dockerfile: Dockerfile.ingest_agent
+      dockerfile: docker/Dockerfile.ingest_agent
     volumes:
       - ./data.db:/app/data.db
       - ./config.yaml:/app/config.yaml
@@ -23,7 +23,7 @@ services:
   ui:
     build:
       context: .
-      dockerfile: Dockerfile.ui
+      dockerfile: docker/Dockerfile.ui
     depends_on:
       - ingest_agent
     ports:

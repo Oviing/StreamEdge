@@ -3,6 +3,7 @@ WORKDIR /app
 COPY requirements.txt ./
 COPY config.yaml ./
 COPY payload_config.yaml ./
-COPY zmq_ingest_agent.py ./
+RUN echo "Rebuild"
+COPY ingest/zmq_ingest_agent.py ./
 RUN pip install --no-cache-dir -r requirements.txt
 CMD ["python", "zmq_ingest_agent.py"]

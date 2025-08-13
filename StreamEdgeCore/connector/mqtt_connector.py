@@ -4,8 +4,12 @@ import zmq
 import sys
 import time
 
-# Load config
-with open("mqtt_config.yaml", "r") as f:
+
+# Load config using absolute path
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+mqtt_config_path = os.path.join(BASE_DIR, "mqtt_config.yaml")
+with open(mqtt_config_path, "r") as f:
     config = yaml.safe_load(f)["mqtt"]
 
 broker = config["broker"]

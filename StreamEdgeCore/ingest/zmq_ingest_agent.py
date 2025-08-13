@@ -5,12 +5,17 @@ import yaml
 import json
 
 
-# Load main config from YAML file
-with open('config.yaml', 'r') as f:
+
+# Load main config from YAML file using absolute path
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(BASE_DIR, 'config.yaml')
+payload_config_path = os.path.join(BASE_DIR, 'payload_config.yaml')
+
+with open(config_path, 'r') as f:
     config = yaml.safe_load(f)
 
-# Load payload structure config
-with open('payload_config.yaml', 'r') as f:
+with open(payload_config_path, 'r') as f:
     payload_config = yaml.safe_load(f)
 
 DB_NAME = config.get('DB_NAME', 'data.db')

@@ -1,8 +1,10 @@
 import sqlite3
 import yaml
+import os
 
 # Load DB setup config
-with open('db_setup.yaml', 'r') as f:
+config_path = os.path.join(os.path.dirname(__file__), '..', 'db_setup.yaml')
+with open(config_path, 'r') as f:
     db_config = yaml.safe_load(f)
 
 DB_NAME = db_config.get('DB_NAME', 'data.db')
