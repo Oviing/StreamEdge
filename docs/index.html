@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamEdge - Edge Computing Solution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>StreamEdge</h1>
+            <p>Collect shopfloor data on the edge.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview" class="container">
+            <h2>Overview</h2>
+            <p>StreamEdge is an edge computing solution designed to collect, process, and visualize shopfloor data in real-time. It supports integration with various industrial protocols and provides a modular architecture for data ingestion, storage, and visualization.</p>
+        </section>
+
+        <section id="features" class="container">
+            <h2>Features</h2>
+            <ul>
+                <li>Real-time data ingestion from shopfloor devices</li>
+                <li>Modular connectors (e.g., MQTT)</li>
+                <li>Local database storage</li>
+                <li>Streamlit-based UI for data visualization</li>
+                <li>Dockerized deployment for easy setup</li>
+            </ul>
+        </section>
+
+        <section id="getting-started" class="container">
+            <h2>Getting Started</h2>
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Python 3.8+</li>
+                <li>Docker (optional, for containerized deployment)</li>
+                <li>pip</li>
+            </ul>
+
+            <h3>Installation</h3>
+            <pre><code>git clone https://github.com/yourusername/StreamEdge.git
+cd StreamEdge</code></pre>
+            <pre><code>pip install -r StreamEdgeCore/requirements.txt</code></pre>
+            <pre><code>pip install -r StreamEdgeCore/connector/requirements.txt</code></pre>
+
+            <h3>Usage</h3>
+            <pre><code>python StreamEdgeCore/zmq_ingest_agent.py</code></pre>
+            <pre><code>streamlit run StreamEdgeCore/streamlit_app.py</code></pre>
+            <pre><code>cd StreamEdgeCore
+docker-compose up</code></pre>
+        </section>
+
+        <section id="configuration" class="container">
+            <h2>Configuration</h2>
+            <p>Edit <code>StreamEdgeCore/config.yaml</code> for core settings.</p>
+            <p>Edit <code>StreamEdgeCore/connector/mqtt_config.yaml</code> for MQTT connector settings.</p>
+        </section>
+
+        <section id="license" class="container">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License.</p>
+        </section>
+
+        <section id="contributing" class="container">
+            <h2>Contributing</h2>
+            <p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 StreamEdge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
